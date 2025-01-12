@@ -27,9 +27,14 @@
 
 ### 📂 My Featured Projects
 
-- 🚀 Banking System Project: **[Banking System Project](git:git@github.com:kerthnorth/AdvancedATM.git)**
+- 🚀 Banking System Project: **[Banking System Project](https://github.com/kerthnorth/ModifiedATM.git)**
 
   _A robust banking application featuring user authentication, transaction tracking._
+
+- 🏋️ Fitness App Project: **[Fitness App](https://github.com/kerthnorth/FitnessApp.git)**
+
+  _An interactive fitness app focusing on user engagement and movement tracking.
+  With Firebase integration._
   
 ---
 
