@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form with Email.js</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 2rem;
+    }
+
+    form {
+      background: #fff;
+      padding: 2rem;
+      max-width: 400px;
+      margin: 0 auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input,
+    textarea,
+    button {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+
+  <!-- Email.js SDK -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("YOUR_USER_ID"); // Replace with your actual USER ID
+    })();
+  </script>
+</head>
+
+<body>
+
+  <h2 style="text-align:center;">Contact Me</h2>
+
+  <form id="contact-form">
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
+    <input type="email" id="email" name="email" placeholder="Your Email" required>
+    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      emailjs.sendForm('service_cy0wfsf', 'template_dge3y8v', this)
+        .then(function (response) {
+          console.log('Email sent!', response.status, response.text);
+          alert('Email sent successfully!');
+          document.getElementById("contact-form").reset();
+        }, function (error) {
+          console.error('Error sending email:', error);
+          alert('Oops! Something went wrong.');
+        });
+    });
+  </script>
+
+</body>
+
+</html>
