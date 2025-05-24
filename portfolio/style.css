@@ -183,17 +183,17 @@ section {
 
 .about {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 10rems;
+    justify-content: center;
+    gap: 15rem;
     background-color: var(--second-bg-color);
 }
 
 .about-img img {
     width: 32vw;
-    border-radius: 50%;
+    border-radius: 60%;
     box-shadow: 0 0 25px var(--main-color);
-    transition: 0.4 ease-in-out;
+    transition: 0.8 ease-in-out;
 }
 
 .about-img img:hover {
